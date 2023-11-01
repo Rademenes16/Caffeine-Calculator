@@ -11,13 +11,11 @@
 
   <ItemGroup>
     <None Remove="coffee.gif" />
-    <None Remove="coffee1.gif" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="coffee.ico" />
     <PackageReference Include="WpfAnimatedGif" Version="2.0.2" />
-    <Resource Include="coffee1.gif" />
   </ItemGroup>
 
   <ItemGroup>
