@@ -1,0 +1,59 @@
+﻿<Window x:Class="Caffeine_Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        xmlns:local="clr-namespace:Caffeine_Calculator"
+        mc:Ignorable="d"
+        Title="Caffeine Calculator" Height="400" Width="512">
+
+    <Window.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#967259" Offset="0.0"/>
+            <!-- Dark brown -->
+            <GradientStop Color="#634832" Offset="0.65"/>
+            <!-- Chocolate brown -->
+            <GradientStop Color="#38220f" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="133*"/>
+            <RowDefinition Height="133*"/>
+            <RowDefinition Height="133*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="256*"/>
+            <ColumnDefinition Width="256*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Caffeine Calculator" HorizontalAlignment="Center" Margin="0,16,0,0" Width="256" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Top" BorderBrush="#FFECE0D1" BorderThickness="0,0,0,3" FontFamily="Bookman Old Style" Height="50" Grid.ColumnSpan="2" FontSize="20" RenderTransformOrigin="0.5,0.5">
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect>
+        </Label>
+        <Label Content="Caffeine mg/100ml:" HorizontalAlignment="Left" Margin="27,83,0,0" VerticalAlignment="Top" Width="186" Height="45" FontSize="20" FontFamily="Segoe Print">
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect>
+        </Label>
+        <Label x:Name="Label2" Content="Cup ml:" Margin="27,83,0,0" Width="186" Height="45" Grid.Row="1" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Segoe Print">
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect>
+        </Label>
+        <TextBox x:Name="cupml"  TextChanged="TextBox_TextChanged" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" Width="150" Height="25" Grid.Row="2" TextAlignment="Center" FontSize="16" Background="#FFECE0D1"/>
+        <TextBox x:Name="caffeine100ml" TextChanged="TextBox_TextChanged" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" Width="150" Height="25" Grid.Row="1" TextAlignment="Center" FontSize="16" Background="#FFECE0D1"/>
+        <TextBlock x:Name="total" Height="80" Width="256" Grid.Column="1" Grid.Row="1" Text="0 mg" FontSize="36" FontFamily="Segoe Script" HorizontalAlignment="Left" FontWeight="Bold" VerticalAlignment="Center" TextAlignment="Center">
+            <TextBlock.Effect>
+                <DropShadowEffect/>
+            </TextBlock.Effect>
+        </TextBlock>
+        <Label Content="Total Caffeine:" Margin="0,95,0,0" VerticalAlignment="Top" Height="40" Width="170" Grid.Column="1" FontSize="22" FontFamily="Segoe Print" HorizontalAlignment="Center" Grid.RowSpan="2">
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect>
+        </Label>
+        <Image gif:ImageBehavior.AnimatedSource="coffee.gif" Height="100" Grid.Column="1" Width="100" VerticalAlignment="Top" Margin="78,92,78,0" Grid.Row="1" Grid.RowSpan="2" />
+    </Grid>
+</Window>

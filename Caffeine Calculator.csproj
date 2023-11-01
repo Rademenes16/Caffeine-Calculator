@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <RootNamespace>Caffeine_Calculator</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>coffee.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="coffee.gif" />
+    <None Remove="coffee1.gif" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="coffee.ico" />
+    <PackageReference Include="WpfAnimatedGif" Version="2.0.2" />
+    <Resource Include="coffee1.gif" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="coffee.gif" />
+  </ItemGroup>
+
+</Project>
